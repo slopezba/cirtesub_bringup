@@ -10,10 +10,10 @@ controller_manager:
       type: forward_command_controller/ForwardCommandController
 
     body_force_controller:
-      type: catamaran_controllers/BodyForceController
+      type: cirtesub_controllers/BodyForceController
     
     body_velocity_controller:
-      type: catamaran_controllers/BodyVelocityController
+      type: cirtesub_controllers/BodyVelocityController
 
 thruster_test_controller:
   ros__parameters:

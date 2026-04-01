@@ -58,7 +58,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
             "environment",
-            default_value="real",
+            default_value="sim",
             description="Execution environment: real or sim"
         ),
         ros2_control_node,

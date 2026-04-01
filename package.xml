@@ -3,8 +3,8 @@
 <package format="3">
   <name>cirtesub_bringup</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="iedo@uji.es">usuario</maintainer>
+  <description>CIRTESUB bring up package</description>
+  <maintainer email="barajas@uji.es">usuario</maintainer>
   <license>TODO: License declaration</license>
 
   <test_depend>ament_copyright</test_depend>
