@@ -15,6 +15,9 @@ controller_manager:
     body_velocity_controller:
       type: cirtesub_controllers/BodyVelocityController
 
+    stabilize_controller:
+      type: cirtesub_controllers/StabilizeController
+
 thruster_test_controller:
   ros__parameters:
     joints:
@@ -45,3 +48,23 @@ body_velocity_controller:
     kp_r: 3000.0
     ki_r: 10.0
     kd_r: 10.0
+
+stabilize_controller:
+  ros__parameters:
+    feedforward_topic: stabilize_controller/feedforward
+    navigator_topic: /cirtesub/navigator/navigation
+    body_force_controller_name: body_force_controller
+
+    kp_roll: 0.0
+    ki_roll: 0.0
+    kd_roll: 0.0
+
+    kp_pitch: 0.0
+    ki_pitch: 0.0
+    kd_pitch: 0.0
+
+    kp_yaw: 0.0
+    ki_yaw: 0.0
+    kd_yaw: 0.0
+
+    yaw_command_threshold: 0.001

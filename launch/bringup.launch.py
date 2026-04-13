@@ -55,6 +55,13 @@ def generate_launch_description():
         output="screen"
     )
 
+    stabilize_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["stabilize_controller", "--inactive"],
+        output="screen"
+    )
+
     return LaunchDescription([
         DeclareLaunchArgument(
             "environment",
@@ -64,5 +71,6 @@ def generate_launch_description():
         ros2_control_node,
         thruster_test_spawner,
         body_velocity_spawner,
+        stabilize_spawner,
         body_force_spawner
     ])
