@@ -53,18 +53,19 @@ stabilize_controller:
   ros__parameters:
     feedforward_topic: stabilize_controller/feedforward
     navigator_topic: /cirtesub/navigator/navigation
+    debug_wrench_topic: /stabilize_controller/debug_wrench
     body_force_controller_name: body_force_controller
 
-    kp_roll: 0.0
-    ki_roll: 0.0
-    kd_roll: 0.0
+    kp_roll: 15.0
+    ki_roll: 3.0
+    kd_roll: 5.0
 
-    kp_pitch: 0.0
-    ki_pitch: 0.0
-    kd_pitch: 0.0
+    kp_pitch: 15.0
+    ki_pitch: 3.0
+    kd_pitch: 5.0
 
-    kp_yaw: 0.0
-    ki_yaw: 0.0
-    kd_yaw: 0.0
+    kp_yaw: 10.0
+    ki_yaw: 2.0
+    kd_yaw: 6.0
 
     yaw_command_threshold: 0.001
