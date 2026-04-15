@@ -57,20 +57,20 @@ stabilize_controller:
     enable_roll_pitch_service_name: /stabilize_controller/enable_roll_pitch
     disable_roll_pitch_service_name: /stabilize_controller/disable_roll_pitch
     allow_roll_pitch: false
-    feedforward_gain_x: 5.0
-    feedforward_gain_y: 5.0
-    feedforward_gain_z: 40.0
-    feedforward_gain_roll: 1.0
-    feedforward_gain_pitch: 1.0
-    feedforward_gain_yaw: 1.0
+    feedforward_gain_x: 20.0
+    feedforward_gain_y: 20.0
+    feedforward_gain_z: 90.0
+    feedforward_gain_roll: 20.0
+    feedforward_gain_pitch: 20.0
+    feedforward_gain_yaw: 2.0
 
-    kp_roll: 15.0
-    ki_roll: 3.0
-    kd_roll: 5.0
+    kp_roll: 50.0
+    ki_roll: 40.0
+    kd_roll: 40.0
 
-    kp_pitch: 15.0
-    ki_pitch: 3.0
-    kd_pitch: 5.0
+    kp_pitch: 50.0
+    ki_pitch: 40.0
+    kd_pitch: 40.0
 
     kp_yaw: 10.0
     ki_yaw: 2.0
