@@ -53,8 +53,8 @@ stabilize_controller:
   ros__parameters:
     feedforward_topic: stabilize_controller/feedforward
     navigator_topic: /cirtesub/navigator/navigation
-    debug_wrench_topic: /stabilize_controller/debug_wrench
     body_force_controller_name: body_force_controller
+    allow_roll_pitch: false
 
     kp_roll: 15.0
     ki_roll: 3.0
