@@ -60,6 +60,9 @@ stabilize_controller:
     feedforward_gain_x: 5.0
     feedforward_gain_y: 5.0
     feedforward_gain_z: 40.0
+    feedforward_gain_roll: 1.0
+    feedforward_gain_pitch: 1.0
+    feedforward_gain_yaw: 1.0
 
     kp_roll: 15.0
     ki_roll: 3.0
