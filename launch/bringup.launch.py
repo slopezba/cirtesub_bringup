@@ -77,8 +77,8 @@ def generate_launch_description():
         ),
         ros2_control_node,
         thruster_test_spawner,
+        body_force_spawner,
         body_velocity_spawner,
         stabilize_spawner,
         depth_hold_spawner,
-        body_force_spawner
     ])
