@@ -40,17 +40,33 @@ body_force_controller:
 
 body_velocity_controller:
   ros__parameters:
-    cmd_vel_topic: /cmd_vel
-    navigator_topic: /navigator_msg
+    setpoint_topic: /body_velocity_controller/setpoint
+    navigator_topic: /cirtesub/navigator/navigation
     body_force_controller_name: body_force_controller
 
-    kp_u: 4000.0
-    ki_u: 40.0
-    kd_u: 5.0
+    kp_x: 100.0
+    ki_x: 50.0
+    kd_x: 0.0
 
-    kp_r: 3000.0
-    ki_r: 10.0
-    kd_r: 10.0
+    kp_y: 100.0
+    ki_y: 50.0
+    kd_y: 0.0
+
+    kp_z: 800.0
+    ki_z: 400.0
+    kd_z: 0.0
+
+    kp_roll: 100.0
+    ki_roll: 50.0
+    kd_roll: 0.0
+
+    kp_pitch: 100.0
+    ki_pitch: 50.0
+    kd_pitch: 0.0
+
+    kp_yaw: 15.0
+    ki_yaw: 8.0
+    kd_yaw: 0.0
 
 stabilize_controller:
   ros__parameters:
@@ -65,7 +81,7 @@ stabilize_controller:
     feedforward_gain_z: 90.0
     feedforward_gain_roll: 20.0
     feedforward_gain_pitch: 20.0
-    feedforward_gain_yaw: 2.0
+    feedforward_gain_yaw: 1.0
 
     kp_roll: 50.0
     ki_roll: 40.0
@@ -95,7 +111,7 @@ depth_hold_controller:
     feedforward_gain_z: 90.0
     feedforward_gain_roll: 20.0
     feedforward_gain_pitch: 20.0
-    feedforward_gain_yaw: 2.0
+    feedforward_gain_yaw: 1.0
 
     kp_roll: 50.0
     ki_roll: 40.0
@@ -109,9 +125,9 @@ depth_hold_controller:
     ki_yaw: 2.0
     kd_yaw: 6.0
 
-    kp_depth: 10.0
-    ki_depth: 2.0
-    kd_depth: 6.0
+    kp_depth: 400.0
+    ki_depth: 100.0
+    kd_depth: 400.0
 
     command_threshold: 0.001
     depth_command_threshold: 0.001
