@@ -62,6 +62,13 @@ def generate_launch_description():
         output="screen"
     )
 
+    depth_hold_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["depth_hold_controller", "--inactive"],
+        output="screen"
+    )
+
     return LaunchDescription([
         DeclareLaunchArgument(
             "environment",
@@ -72,5 +79,6 @@ def generate_launch_description():
         thruster_test_spawner,
         body_velocity_spawner,
         stabilize_spawner,
+        depth_hold_spawner,
         body_force_spawner
     ])

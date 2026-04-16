@@ -18,6 +18,9 @@ controller_manager:
     stabilize_controller:
       type: cirtesub_controllers/StabilizeController
 
+    depth_hold_controller:
+      type: cirtesub_controllers/DepthHoldController
+
 thruster_test_controller:
   ros__parameters:
     joints:
@@ -77,3 +80,38 @@ stabilize_controller:
     kd_yaw: 6.0
 
     yaw_command_threshold: 0.001
+
+depth_hold_controller:
+  ros__parameters:
+    feedforward_topic: /depth_hold_controller/feedforward
+    navigator_topic: /cirtesub/navigator/navigation
+    setpoint_topic: /depth_hold_controller/set_point
+    body_force_controller_name: body_force_controller
+    enable_roll_pitch_service_name: /depth_hold_controller/enable_roll_pitch
+    disable_roll_pitch_service_name: /depth_hold_controller/disable_roll_pitch
+    allow_roll_pitch: false
+    feedforward_gain_x: 20.0
+    feedforward_gain_y: 20.0
+    feedforward_gain_z: 90.0
+    feedforward_gain_roll: 20.0
+    feedforward_gain_pitch: 20.0
+    feedforward_gain_yaw: 2.0
+
+    kp_roll: 50.0
+    ki_roll: 40.0
+    kd_roll: 40.0
+
+    kp_pitch: 50.0
+    ki_pitch: 40.0
+    kd_pitch: 40.0
+
+    kp_yaw: 10.0
+    ki_yaw: 2.0
+    kd_yaw: 6.0
+
+    kp_depth: 10.0
+    ki_depth: 2.0
+    kd_depth: 6.0
+
+    command_threshold: 0.001
+    depth_command_threshold: 0.001
