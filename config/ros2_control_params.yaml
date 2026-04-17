@@ -42,31 +42,38 @@ body_velocity_controller:
   ros__parameters:
     setpoint_topic: /body_velocity_controller/setpoint
     navigator_topic: /cirtesub/navigator/navigation
+    feedforward_topic: /depth_hold_controller/feedforward
     body_force_controller_name: body_force_controller
 
     kp_x: 100.0
     ki_x: 50.0
     kd_x: 0.0
+    antiwindup_x: 10.0
 
     kp_y: 100.0
     ki_y: 50.0
     kd_y: 0.0
+    antiwindup_y: 10.0
 
     kp_z: 800.0
     ki_z: 400.0
     kd_z: 0.0
+    antiwindup_z: 10.0
 
     kp_roll: 100.0
     ki_roll: 50.0
     kd_roll: 0.0
+    antiwindup_roll: 10.0
 
     kp_pitch: 100.0
     ki_pitch: 50.0
     kd_pitch: 0.0
+    antiwindup_pitch: 10.0
 
     kp_yaw: 15.0
     ki_yaw: 8.0
     kd_yaw: 0.0
+    antiwindup_yaw: 10.0
 
 stabilize_controller:
   ros__parameters:
@@ -76,11 +83,11 @@ stabilize_controller:
     enable_roll_pitch_service_name: /stabilize_controller/enable_roll_pitch
     disable_roll_pitch_service_name: /stabilize_controller/disable_roll_pitch
     allow_roll_pitch: false
-    feedforward_gain_x: 20.0
-    feedforward_gain_y: 20.0
-    feedforward_gain_z: 90.0
-    feedforward_gain_roll: 20.0
-    feedforward_gain_pitch: 20.0
+    feedforward_gain_x: 1.0
+    feedforward_gain_y: 1.0
+    feedforward_gain_z: 1.0
+    feedforward_gain_roll: 1.0
+    feedforward_gain_pitch: 1.0
     feedforward_gain_yaw: 1.0
 
     kp_roll: 50.0
@@ -96,6 +103,8 @@ stabilize_controller:
     kd_yaw: 6.0
 
     yaw_command_threshold: 0.001
+    roll_command_threshold: 0.001
+    pitch_command_threshold: 0.001
 
 depth_hold_controller:
   ros__parameters:
@@ -106,11 +115,11 @@ depth_hold_controller:
     enable_roll_pitch_service_name: /depth_hold_controller/enable_roll_pitch
     disable_roll_pitch_service_name: /depth_hold_controller/disable_roll_pitch
     allow_roll_pitch: false
-    feedforward_gain_x: 20.0
-    feedforward_gain_y: 20.0
-    feedforward_gain_z: 90.0
-    feedforward_gain_roll: 20.0
-    feedforward_gain_pitch: 20.0
+    feedforward_gain_x: 1.0
+    feedforward_gain_y: 1.0
+    feedforward_gain_z: 1.0
+    feedforward_gain_roll: 1.0
+    feedforward_gain_pitch: 1.0
     feedforward_gain_yaw: 1.0
 
     kp_roll: 50.0
