@@ -55,6 +55,13 @@ def generate_launch_description():
         output="screen"
     )
 
+    position_hold_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["position_hold_controller", "--inactive"],
+        output="screen"
+    )
+
     stabilize_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -79,6 +86,7 @@ def generate_launch_description():
         thruster_test_spawner,
         body_force_spawner,
         body_velocity_spawner,
+        position_hold_spawner,
         stabilize_spawner,
         depth_hold_spawner,
     ])

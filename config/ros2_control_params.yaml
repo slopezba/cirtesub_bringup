@@ -15,6 +15,9 @@ controller_manager:
     body_velocity_controller:
       type: cirtesub_controllers/BodyVelocityController
 
+    position_hold_controller:
+      type: cirtesub_controllers/PositionHoldController
+
     stabilize_controller:
       type: cirtesub_controllers/StabilizeController
 
@@ -74,6 +77,48 @@ body_velocity_controller:
     ki_yaw: 8.0
     kd_yaw: 0.0
     antiwindup_yaw: 10.0
+
+position_hold_controller:
+  ros__parameters:
+    setpoint_topic: /position_hold_controller/setpoint
+    feedforward_topic: /position_hold_controller/feedforward
+    navigator_topic: /cirtesub/navigator/navigation
+    body_velocity_controller_name: body_velocity_controller
+    setpoint_frame_id: world_ned
+
+    kp_x: 1.0
+    ki_x: 0.0
+    kd_x: 0.0
+    antiwindup_x: 1.0
+
+    kp_y: 1.0
+    ki_y: 0.0
+    kd_y: 0.0
+    antiwindup_y: 1.0
+
+    kp_z: 1.0
+    ki_z: 0.0
+    kd_z: 0.0
+    antiwindup_z: 1.0
+
+    kp_roll: 1.0
+    ki_roll: 0.0
+    kd_roll: 0.0
+    antiwindup_roll: 1.0
+
+    kp_pitch: 1.0
+    ki_pitch: 0.0
+    kd_pitch: 0.0
+    antiwindup_pitch: 1.0
+
+    kp_yaw: 1.0
+    ki_yaw: 0.0
+    kd_yaw: 0.0
+    antiwindup_yaw: 1.0
+
+    linear_feedforward_threshold: 0.001
+    angular_feedforward_threshold: 0.001
+    feedforward_timeout: 0.25
 
 stabilize_controller:
   ros__parameters:

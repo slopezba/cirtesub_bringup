@@ -1,55 +1,55 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <root>
  <tabbed_widget parent="main_window" name="Main Window">
-  <Tab tab_name="velocidad" containers="1">
+  <Tab containers="1" tab_name="velocidad">
    <Container>
-    <DockSplitter orientation="-" count="2" sizes="0.5;0.5">
-     <DockSplitter orientation="|" count="3" sizes="0.333333;0.333333;0.333333">
+    <DockSplitter sizes="0.5;0.5" orientation="-" count="2">
+     <DockSplitter sizes="0.333333;0.333333;0.333333" orientation="|" count="3">
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-0.855841" top="0.818055" right="571.089906" left="521.097949"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="1.037096" bottom="-1.275634" left="0.000000"/>
         <limitY/>
         <curve name="/body_velocity_controller/setpoint/linear/x" color="#1f77b4"/>
         <curve name="/cirtesub/navigator/navigation/body_velocity/linear/x" color="#17becf"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-0.118144" top="0.099422" right="571.089906" left="521.097949"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="0.343722" bottom="-0.614061" left="0.000000"/>
         <limitY/>
         <curve name="/body_velocity_controller/setpoint/linear/y" color="#d62728"/>
         <curve name="/cirtesub/navigator/navigation/body_velocity/linear/y" color="#bcbd22"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-0.096358" top="0.119332" right="571.089906" left="521.097949"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="1.007853" bottom="-0.298130" left="0.000000"/>
         <limitY/>
         <curve name="/body_velocity_controller/setpoint/linear/z" color="#1ac938"/>
         <curve name="/cirtesub/navigator/navigation/body_velocity/linear/z" color="#1f77b4"/>
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter orientation="|" count="3" sizes="0.333333;0.333333;0.333333">
+     <DockSplitter sizes="0.333333;0.333333;0.333333" orientation="|" count="3">
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-0.283939" top="0.299815" right="571.089906" left="521.097949"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="1.409108" bottom="-0.684248" left="0.000000"/>
         <limitY/>
         <curve name="/body_velocity_controller/setpoint/angular/x" color="#ff7f0e"/>
         <curve name="/cirtesub/navigator/navigation/body_velocity/angular/x" color="#d62728"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-2.333433" top="2.233478" right="571.089906" left="521.097949"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="0.820257" bottom="-0.822011" left="0.000000"/>
         <limitY/>
         <curve name="/body_velocity_controller/setpoint/angular/y" color="#f14cc1"/>
         <curve name="/cirtesub/navigator/navigation/body_velocity/angular/y" color="#1ac938"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-0.226343" top="0.250655" right="571.089906" left="521.097949"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="0.804253" bottom="-1.045999" left="0.000000"/>
         <limitY/>
         <curve name="/body_velocity_controller/setpoint/angular/z" color="#9467bd"/>
         <curve name="/cirtesub/navigator/navigation/body_velocity/angular/z" color="#ff7f0e"/>
@@ -59,123 +59,178 @@
     </DockSplitter>
    </Container>
   </Tab>
-  <Tab tab_name="stabilize" containers="1">
+  <Tab containers="1" tab_name="stabilize">
    <Container>
-    <DockSplitter orientation="-" count="2" sizes="0.5;0.5">
-     <DockSplitter orientation="|" count="3" sizes="0.333333;0.333333;0.333333">
+    <DockSplitter sizes="0.5;0.5" orientation="-" count="2">
+     <DockSplitter sizes="0.333333;0.333333;0.333333" orientation="|" count="3">
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-5.018460" top="-4.913887" right="571.089906" left="521.108673"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="0.957108" bottom="-4.867029" left="1548.959609"/>
         <limitY/>
         <curve name="/cirtesub/navigator/navigation/position/position/x" color="#bcbd22"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="0.820154" top="0.931419" right="571.089906" left="521.108673"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="0.492676" bottom="-2.429303" left="1548.959609"/>
         <limitY/>
         <curve name="/cirtesub/navigator/navigation/position/position/y" color="#1f77b4"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="1.621265" top="1.951761" right="571.089906" left="521.108673"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="3.706058" bottom="1.004410" left="1548.959609"/>
         <limitY/>
         <curve name="/cirtesub/navigator/navigation/position/position/z" color="#d62728"/>
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter orientation="|" count="3" sizes="0.333333;0.333333;0.333333">
+     <DockSplitter sizes="0.333333;0.333333;0.333333" orientation="|" count="3">
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-0.027519" top="0.052044" right="571.089906" left="0.000000"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="1.615571" bottom="-1.551195" left="1548.959609"/>
         <limitY/>
         <curve name="/cirtesub/navigator/navigation/rpy/x" color="#f14cc1"/>
-        <curve name="/stabilize_controller/set_point/x" color="#1ac938"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-0.181214" top="0.147610" right="571.089906" left="0.000000"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="0.723970" bottom="-1.105550" left="1548.959609"/>
         <limitY/>
         <curve name="/cirtesub/navigator/navigation/rpy/y" color="#9467bd"/>
-        <curve name="/stabilize_controller/set_point/y" color="#ff7f0e"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="2.015848" top="2.216195" right="571.089906" left="0.000000"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="3.068780" bottom="1.951248" left="1548.959609"/>
         <limitY/>
         <curve name="/cirtesub/navigator/navigation/rpy/z" color="#17becf"/>
-        <curve name="/stabilize_controller/set_point/z" color="#f14cc1"/>
        </plot>
       </DockArea>
      </DockSplitter>
     </DockSplitter>
    </Container>
   </Tab>
-  <Tab tab_name="depth_hold" containers="1">
+  <Tab containers="1" tab_name="depth_hold">
    <Container>
-    <DockSplitter orientation="-" count="2" sizes="0.5;0.5">
-     <DockSplitter orientation="|" count="3" sizes="0.333333;0.333333;0.333333">
+    <DockSplitter sizes="0.5;0.5" orientation="-" count="2">
+     <DockSplitter sizes="0.333333;0.333333;0.333333" orientation="|" count="3">
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-0.283939" top="0.299815" right="571.089906" left="493.845461"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="1.615571" bottom="-1.551195" left="1534.066205"/>
         <limitY/>
-        <curve name="/depth_hold_controller/set_point/rpy/x" color="#9467bd"/>
-        <curve name="/cirtesub/navigator/navigation/body_velocity/angular/x" color="#d62728"/>
+        <curve name="/depth_hold_controller/set_point/rpy/x" color="#f58110"/>
+        <curve name="/cirtesub/navigator/navigation/rpy/x" color="#f14cc1"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-2.333433" top="2.233478" right="571.089906" left="493.845461"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="0.723970" bottom="-1.105550" left="1534.066205"/>
         <limitY/>
-        <curve name="/depth_hold_controller/set_point/rpy/y" color="#17becf"/>
-        <curve name="/cirtesub/navigator/navigation/body_velocity/angular/y" color="#1ac938"/>
+        <curve name="/depth_hold_controller/set_point/rpy/y" color="#0d6a00"/>
+        <curve name="/cirtesub/navigator/navigation/rpy/y" color="#9467bd"/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-0.275612" top="2.270665" right="571.089906" left="493.845461"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="3.068780" bottom="1.951248" left="1534.066205"/>
         <limitY/>
-        <curve name="/depth_hold_controller/set_point/rpy/z" color="#bcbd22"/>
-        <curve name="/cirtesub/navigator/navigation/body_velocity/angular/z" color="#ff7f0e"/>
+        <curve name="/depth_hold_controller/set_point/rpy/z" color="#222bbd"/>
+        <curve name="/cirtesub/navigator/navigation/rpy/z" color="#17becf"/>
        </plot>
       </DockArea>
      </DockSplitter>
-     <DockSplitter orientation="|" count="3" sizes="0.333333;0.333333;0.333333">
+     <DockSplitter sizes="0.333333;0.333333;0.333333" orientation="|" count="3">
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="0.000000" top="1.000000" right="1.000000" left="0.000000"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1.000000" top="1.000000" bottom="0.000000" left="0.000000"/>
         <limitY/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="0.000000" top="1.000000" right="1.000000" left="0.000000"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1.000000" top="1.000000" bottom="0.000000" left="0.000000"/>
         <limitY/>
        </plot>
       </DockArea>
       <DockArea name="...">
-       <plot flip_y="false" mode="TimeSeries" flip_x="false" line_width="1.0">
-        <range bottom="-0.136938" top="1.783112" right="571.089906" left="493.845461"/>
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="3.706058" bottom="1.004410" left="1534.066205"/>
         <limitY/>
-        <curve name="/depth_hold_controller/set_point/position/z" color="#1f77b4"/>
-        <curve name="/cirtesub/navigator/navigation/body_velocity/linear/z" color="#1f77b4"/>
+        <curve name="/depth_hold_controller/set_point/position/z" color="#0d0086"/>
+        <curve name="/cirtesub/navigator/navigation/position/position/z" color="#d62728"/>
        </plot>
       </DockArea>
      </DockSplitter>
     </DockSplitter>
    </Container>
   </Tab>
-  <currentTabIndex index="2"/>
+  <Tab containers="1" tab_name="position_hold">
+   <Container>
+    <DockSplitter sizes="0.5;0.5" orientation="-" count="2">
+     <DockSplitter sizes="0.333333;0.333333;0.333333" orientation="|" count="3">
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="0.957108" bottom="-4.867029" left="1532.811236"/>
+        <limitY/>
+        <curve name="/position_hold_controller/setpoint/pose/position/x" color="#1f77b4"/>
+        <curve name="/cirtesub/navigator/navigation/position/position/x" color="#17becf"/>
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="0.492676" bottom="-2.429303" left="1532.811236"/>
+        <limitY/>
+        <curve name="/position_hold_controller/setpoint/pose/position/y" color="#d62728"/>
+        <curve name="/cirtesub/navigator/navigation/position/position/y" color="#bcbd22"/>
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="3.706058" bottom="1.004410" left="1532.811236"/>
+        <limitY/>
+        <curve name="/position_hold_controller/setpoint/pose/position/z" color="#1ac938"/>
+        <curve name="/cirtesub/navigator/navigation/position/position/z" color="#1f77b4"/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+     <DockSplitter sizes="0.333333;0.333333;0.333333" orientation="|" count="3">
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="1.615571" bottom="-1.551195" left="1532.811236"/>
+        <limitY/>
+        <curve name="/position_hold_controller/setpoint/pose/orientation/roll" color="#ff7f0e"/>
+        <curve name="/cirtesub/navigator/navigation/rpy/x" color="#d62728"/>
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="0.723970" bottom="-1.105550" left="1532.811236"/>
+        <limitY/>
+        <curve name="/position_hold_controller/setpoint/pose/orientation/pitch" color="#f14cc1"/>
+        <curve name="/cirtesub/navigator/navigation/rpy/y" color="#1ac938"/>
+       </plot>
+      </DockArea>
+      <DockArea name="...">
+       <plot flip_y="false" flip_x="false" line_width="1.0" mode="TimeSeries">
+        <range right="1598.940515" top="3.068780" bottom="1.951248" left="1532.811236"/>
+        <limitY/>
+        <curve name="/position_hold_controller/setpoint/pose/orientation/yaw" color="#9467bd"/>
+        <curve name="/cirtesub/navigator/navigation/rpy/z" color="#ff7f0e"/>
+       </plot>
+      </DockArea>
+     </DockSplitter>
+    </DockSplitter>
+   </Container>
+  </Tab>
+  <currentTabIndex index="3"/>
  </tabbed_widget>
  <use_relative_time_offset enabled="1"/>
  <!-- - - - - - - - - - - - - - - -->
  <!-- - - - - - - - - - - - - - - -->
  <Plugins>
   <plugin ID="DataLoad CSV">
-   <parameters time_axis="" delimiter="0"/>
+   <parameters delimiter="0" time_axis=""/>
   </plugin>
   <plugin ID="DataLoad MCAP"/>
   <plugin ID="DataLoad ROS2 bags">
@@ -193,7 +248,7 @@
    <max_array_size value="100"/>
    <boolean_strings_to_number value="true"/>
    <remove_suffix_from_strings value="true"/>
-   <selected_topics value="/body_velocity_controller/setpoint;/cirtesub/navigator/navigation;/stabilize_controller/feedforward;/body_force/command;/depth_hold_controller/feedforward;/depth_hold_controller/set_point;/stabilize_controller/set_point"/>
+   <selected_topics value="/cirtesub/navigator/navigation;/body_force/command;/body_velocity_controller/setpoint;/depth_hold_controller/feedforward;/depth_hold_controller/set_point;/stabilize_controller/feedforward;/stabilize_controller/set_point;/position_hold_controller/setpoint"/>
   </plugin>
   <plugin ID="UDP Server"/>
   <plugin ID="WebSocket Server"/>
