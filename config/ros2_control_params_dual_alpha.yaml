@@ -4,14 +4,17 @@ controller_manager:
 
     hardware_components_initial_state:
       inactive:
-        - ThrustersSystem
+        - cirtesub_thrusters
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
 
     thruster_test_controller:
       type: forward_command_controller/ForwardCommandController
 
     body_force_controller:
       type: cirtesub_controllers/BodyForceController
-    
+
     body_velocity_controller:
       type: cirtesub_controllers/BodyVelocityController
 
@@ -23,6 +26,18 @@ controller_manager:
 
     depth_hold_controller:
       type: cirtesub_controllers/DepthHoldController
+
+    alpha_left_forward_velocity_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    alpha_right_forward_velocity_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    alpha_left_joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    alpha_right_joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
 
 thruster_test_controller:
   ros__parameters:
@@ -186,3 +201,131 @@ depth_hold_controller:
 
     command_threshold: 0.001
     depth_command_threshold: 0.001
+
+alpha_left_forward_velocity_controller:
+  ros__parameters:
+    joints:
+      - cirtesub/alpha_left/axis_a
+      - cirtesub/alpha_left/axis_b
+      - cirtesub/alpha_left/axis_c
+      - cirtesub/alpha_left/axis_d
+      - cirtesub/alpha_left/axis_e
+    interface_name: velocity
+
+alpha_right_forward_velocity_controller:
+  ros__parameters:
+    joints:
+      - cirtesub/alpha_right/axis_a
+      - cirtesub/alpha_right/axis_b
+      - cirtesub/alpha_right/axis_c
+      - cirtesub/alpha_right/axis_d
+      - cirtesub/alpha_right/axis_e
+    interface_name: velocity
+
+alpha_left_joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - cirtesub/alpha_left/axis_a
+      - cirtesub/alpha_left/axis_b
+      - cirtesub/alpha_left/axis_c
+      - cirtesub/alpha_left/axis_d
+      - cirtesub/alpha_left/axis_e
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 40.0
+    command_publish_rate: 40.0
+    allow_nonzero_velocity_at_trajectory_end: false
+    interpolation_method: splines
+    gains:
+      cirtesub/alpha_left/axis_a:
+        p: 0.5
+        i: 0.0
+        d: 0.0
+        i_clamp_min: -1.0
+        i_clamp_max: 1.0
+        ff_velocity_scale: 1.0
+      cirtesub/alpha_left/axis_b:
+        p: 0.5
+        i: 0.0
+        d: 0.0
+        i_clamp_min: -1.0
+        i_clamp_max: 1.0
+        ff_velocity_scale: 1.0
+      cirtesub/alpha_left/axis_c:
+        p: 0.5
+        i: 0.0
+        d: 0.0
+        i_clamp_min: -1.0
+        i_clamp_max: 1.0
+        ff_velocity_scale: 1.0
+      cirtesub/alpha_left/axis_d:
+        p: 0.5
+        i: 0.0
+        d: 0.0
+        i_clamp_min: -1.0
+        i_clamp_max: 1.0
+        ff_velocity_scale: 1.0
+      cirtesub/alpha_left/axis_e:
+        p: 0.5
+        i: 0.0
+        d: 0.0
+        i_clamp_min: -1.0
+        i_clamp_max: 1.0
+        ff_velocity_scale: 1.0
+
+alpha_right_joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - cirtesub/alpha_right/axis_a
+      - cirtesub/alpha_right/axis_b
+      - cirtesub/alpha_right/axis_c
+      - cirtesub/alpha_right/axis_d
+      - cirtesub/alpha_right/axis_e
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 40.0
+    command_publish_rate: 40.0
+    allow_nonzero_velocity_at_trajectory_end: false
+    interpolation_method: splines
+    gains:
+      cirtesub/alpha_right/axis_a:
+        p: 0.5
+        i: 0.0
+        d: 0.0
+        i_clamp_min: -1.0
+        i_clamp_max: 1.0
+        ff_velocity_scale: 1.0
+      cirtesub/alpha_right/axis_b:
+        p: 0.5
+        i: 0.0
+        d: 0.0
+        i_clamp_min: -1.0
+        i_clamp_max: 1.0
+        ff_velocity_scale: 1.0
+      cirtesub/alpha_right/axis_c:
+        p: 0.5
+        i: 0.0
+        d: 0.0
+        i_clamp_min: -1.0
+        i_clamp_max: 1.0
+        ff_velocity_scale: 1.0
+      cirtesub/alpha_right/axis_d:
+        p: 0.5
+        i: 0.0
+        d: 0.0
+        i_clamp_min: -1.0
+        i_clamp_max: 1.0
+        ff_velocity_scale: 1.0
+      cirtesub/alpha_right/axis_e:
+        p: 0.5
+        i: 0.0
+        d: 0.0
+        i_clamp_min: -1.0
+        i_clamp_max: 1.0
+        ff_velocity_scale: 1.0

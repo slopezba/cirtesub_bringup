@@ -1,5 +1,6 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, Command
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
@@ -12,10 +13,12 @@ def generate_launch_description():
     description_pkg = get_package_share_directory("cirtesub_description")
     hardware_pkg = get_package_share_directory("thrusters_hardware_interface")
     bringup_pkg = get_package_share_directory("cirtesub_bringup")
+    diagnostics_pkg = get_package_share_directory("sura_diagnostics")
 
     xacro_file = os.path.join(description_pkg, "urdf", "cirtesub.urdf.xacro")
     csv_file = os.path.join(hardware_pkg, "config", "t500_lookup.csv")
     params_file = os.path.join(bringup_pkg, "config", "ros2_control_params.yaml")
+    diagnostics_launch = os.path.join(diagnostics_pkg, "launch", "diagnostics.launch.py")
 
     robot_description = Command([
         "xacro ",
@@ -76,6 +79,10 @@ def generate_launch_description():
         output="screen"
     )
 
+    diagnostics = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(diagnostics_launch)
+    )
+
     return LaunchDescription([
         DeclareLaunchArgument(
             "environment",
@@ -83,10 +90,11 @@ def generate_launch_description():
             description="Execution environment: real or sim"
         ),
         ros2_control_node,
+        diagnostics,
         thruster_test_spawner,
         body_force_spawner,
         body_velocity_spawner,
-        position_hold_spawner,
         stabilize_spawner,
         depth_hold_spawner,
+        position_hold_spawner,
     ])
