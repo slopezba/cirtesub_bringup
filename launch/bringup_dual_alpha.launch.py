@@ -124,6 +124,13 @@ def generate_launch_description():
         output="screen",
     )
 
+    task_priority_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["task_priority_controller", "--inactive"],
+        output="screen",
+    )
+
     stabilize_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -205,5 +212,6 @@ def generate_launch_description():
             stabilize_spawner,
             depth_hold_spawner,
             position_hold_spawner,
+            task_priority_spawner,
         ]
     )

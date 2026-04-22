@@ -44,6 +44,7 @@ body_force_controller:
 
 body_velocity_controller:
   ros__parameters:
+    debug.enabled: true
     setpoint_topic: /body_velocity_controller/setpoint
     navigator_topic: /cirtesub/navigator/navigation
     feedforward_topic: /depth_hold_controller/feedforward
@@ -81,6 +82,7 @@ body_velocity_controller:
 
 position_hold_controller:
   ros__parameters:
+    debug.enabled: true
     setpoint_topic: /position_hold_controller/setpoint
     feedforward_topic: /position_hold_controller/feedforward
     navigator_topic: /cirtesub/navigator/navigation
@@ -123,6 +125,7 @@ position_hold_controller:
 
 stabilize_controller:
   ros__parameters:
+    debug.enabled: true
     feedforward_topic: /stabilize_controller/feedforward
     navigator_topic: /cirtesub/navigator/navigation
     body_force_controller_name: body_force_controller
@@ -139,14 +142,17 @@ stabilize_controller:
     kp_roll: 50.0
     ki_roll: 40.0
     kd_roll: 40.0
+    antiwindup_roll: 10.0
 
     kp_pitch: 50.0
     ki_pitch: 40.0
     kd_pitch: 40.0
+    antiwindup_pitch: 10.0
 
     kp_yaw: 10.0
     ki_yaw: 2.0
     kd_yaw: 6.0
+    antiwindup_yaw: 10.0
 
     yaw_command_threshold: 0.001
     roll_command_threshold: 0.001
@@ -154,6 +160,7 @@ stabilize_controller:
 
 depth_hold_controller:
   ros__parameters:
+    debug.enabled: true
     feedforward_topic: /depth_hold_controller/feedforward
     navigator_topic: /cirtesub/navigator/navigation
     setpoint_topic: /depth_hold_controller/set_point
@@ -171,18 +178,22 @@ depth_hold_controller:
     kp_roll: 50.0
     ki_roll: 40.0
     kd_roll: 40.0
+    antiwindup_roll: 10.0
 
     kp_pitch: 50.0
     ki_pitch: 40.0
     kd_pitch: 40.0
+    antiwindup_pitch: 10.0
 
     kp_yaw: 10.0
     ki_yaw: 2.0
     kd_yaw: 6.0
+    antiwindup_yaw: 10.0
 
     kp_depth: 400.0
     ki_depth: 100.0
     kd_depth: 400.0
+    antiwindup_depth: 10.0
 
     command_threshold: 0.001
     depth_command_threshold: 0.001
